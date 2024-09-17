@@ -1,0 +1,10 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 677px) {
+  .pageContainer-content {
+    margin-left: 265px;
+  } 
+}
