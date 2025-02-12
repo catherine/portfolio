@@ -1,0 +1,15 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  margin: auto;
+}
+
+@media screen and (min-width: 677px) {
+  .pageContainer-content {
+    padding-left: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  } 
+}

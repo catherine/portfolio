@@ -1,0 +1,18 @@
+.socialLinks {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 676px) {
+  .socialLinks {
+    display: none;
+  } 
+}
+
+.socialLink {
+  padding: 8px;
+}
+
+.socialLink > svg > path {
+  fill: #234;
+}
