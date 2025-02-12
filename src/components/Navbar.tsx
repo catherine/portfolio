@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 import logo from "../assets/watermark_500_black.png";
 import SocialLinks from "./SocialLinks";
-import { RefObject, useEffect, useRef, useState } from "react";
+import { RefObject } from "react";
 
 const Navbar = ({
   navbarRef,
