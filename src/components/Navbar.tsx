@@ -2,33 +2,31 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 import logo from "../assets/watermark_500_black.png";
-import SocialLinks from "./SocialLinks";
+import { SocialLinks } from "./SocialLinks";
 import { RefObject } from "react";
 
-const Navbar = ({
+export const Navbar = ({
   navbarRef,
 }: {
   navbarRef: RefObject<HTMLDivElement | null>;
 }) => {
   return (
     <div className="navbar" ref={navbarRef}>
-      <div className="navbar-container">
+      <div className="navbarContainer">
         <img
           aria-hidden
-          className="navbar-logo"
+          className="navbarLogo"
           src={logo}
           alt="Catherine Patchell"
         />
-        <nav className="navbar-links">
+        <nav className="navbarLinks">
           <NavLink to="/">Live Music</NavLink>
           <NavLink to="/weddings">Weddings</NavLink>
           <NavLink to="/portraits">Portraits</NavLink>
-          <NavLink to="/about">Contact</NavLink>
+          <NavLink to="/about">About</NavLink>
         </nav>
       </div>
       <SocialLinks />
     </div>
   );
 };
-
-export default Navbar;
