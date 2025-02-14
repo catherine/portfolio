@@ -1,5 +1,7 @@
-import Image from "../components/Image";
-import PageContainer from "../components/PageContainer";
+import { Image } from "../components/Image";
+import { PageContainer } from "../components/PageContainer";
+import { ImageRow } from "../components/ImageRow";
+
 
 import A_1x from "../assets/portraits/DSC_2242.jpg";
 import B_1x from "../assets/portraits/DSC_1347.jpg";
@@ -10,43 +12,14 @@ import F_1x from "../assets/portraits/Capture0135.jpg";
 import G_1x from "../assets/portraits/DSC_1662.jpg";
 import H_1x from "../assets/portraits/DSC_1221.jpg";
 
-
-
-const Portraits = () => {
+export const Portraits = () => {
   return (
     <PageContainer>
-      <div style={{ display: "flex", flexDirection: "row", gap: "8px" }}>
-        <div>
-          <Image isVertical src={A_1x} />
-        </div>
-        <div>
-          <Image isVertical src={B_1x} />
-        </div>
-      </div>
-
+      <ImageRow images={[A_1x, B_1x]} shouldShowVerticalOnMobile />
       <Image src={C_1x} />
-
-      <div style={{ display: "flex", flexDirection: "row", gap: "8px" }}>
-        <div>
-          <Image isVertical src={D_1x} />
-        </div>
-        <div>
-          <Image isVertical src={E_1x} />
-        </div>
-      </div>
-
+      <ImageRow images={[D_1x, E_1x]} shouldShowVerticalOnMobile />
       <Image src={F_1x} />
-
-      <div style={{ display: "flex", flexDirection: "row", gap: "8px" }}>
-        <div>
-          <Image isVertical src={G_1x} />
-        </div>
-        <div>
-          <Image isVertical src={H_1x} />
-        </div>
-      </div>
+      <ImageRow images={[G_1x, H_1x]} shouldShowVerticalOnMobile />
     </PageContainer>
   );
 };
-
-export default Portraits;
