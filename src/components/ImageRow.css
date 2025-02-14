@@ -1,0 +1,15 @@
+.imageRow {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.imageRow.verticalOnMobile {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 677px) {
+  .imageRow, .imageRow.verticalOnMobile {
+    flex-direction: row;
+  }
+}
