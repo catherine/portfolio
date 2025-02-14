@@ -1,30 +1,32 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
-import Navbar from "./Navbar";
+import { Navbar } from "./Navbar";
 
 import "./PageContainer.css";
-import useScreenSize from "../hooks/useScreenSize";
+import { useScreenSize } from "../hooks/useScreenSize";
 import { MOBILE_BREAKPOINT } from "../constants";
 
 interface PageContainerProps {
   children: ReactNode;
 }
 
-function PageContainer({ children }: PageContainerProps) {
-
+export function PageContainer({ children }: PageContainerProps) {
   const navbarRef = useRef<HTMLDivElement>(null);
   const [navbarOffset, setNavbarOffset] = useState(0);
-
   const {width: screenWidth} = useScreenSize();
 
   useEffect(() => {
-    if (navbarRef.current) {
-      const offset = navbarRef.current.offsetHeight;
-      setNavbarOffset(offset);
-    }
+    const updateHeight = () => {
+      if (navbarRef.current) {
+        setNavbarOffset(navbarRef.current.offsetHeight);
+      }
+    };
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
   return (
-    <div className="pageContainer" style={{ height: "100vh" }}>
+    <div className="pageContainer">
       <Navbar navbarRef={navbarRef} />
       <div
         className="pageContainer-content"
@@ -37,5 +39,3 @@ function PageContainer({ children }: PageContainerProps) {
     </div>
   );
 }
-
-export default PageContainer;
