@@ -1,0 +1,35 @@
+.about {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* gap: 24px; */
+  margin-top: 24px;
+  margin-right: 24px;
+}
+
+.about-desktopImage {
+  display: none;
+}
+
+.about-mobileImage {
+  margin-right: 24px;
+  display: flex;
+}
+
+@media (min-width: 992px) {
+
+  .about {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .about-desktopImage {
+    display: block;
+    min-width: 350px;
+    flex: 0 0 40%;
+  }
+
+  .about-mobileImage {
+    display: none;
+  }
+}
