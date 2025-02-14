@@ -1,6 +1,6 @@
 import './SocialLinks.css';
 
-function SocialLinks() {
+export function SocialLinks() {
   return (
     <div className="socialLinks">
       <a
@@ -36,5 +36,3 @@ function SocialLinks() {
     </div>
   )
 }
-
-export default SocialLinks;

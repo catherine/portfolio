@@ -1,6 +1,6 @@
 import './Image.css'
 
-function Image({src, srcSet, alt }: {isVertical?: boolean, src: string, srcSet?: string; alt?: string }) {
+export function Image({src, srcSet, alt }: { src: string, srcSet?: string; alt?: string }) {
   const handleRightClickPrevention = (e: MouseEvent) => {
     e.preventDefault(); // Disable the right-click menu
   };
@@ -15,5 +15,3 @@ function Image({src, srcSet, alt }: {isVertical?: boolean, src: string, srcSet?:
     />
   );
 }
-
-export default Image;
