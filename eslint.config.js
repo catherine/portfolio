@@ -9,15 +9,15 @@ export default [
   { ignores: ["dist"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ["**/*.{ts,tsx}"],
+    files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
-      // parserOptions: {
-      //   ecmaVersion: "latest",
-      //   ecmaFeatures: { jsx: true },
-      //   sourceType: "module",
-      // },
+      parserOptions: {
+        ecmaVersion: "latest",
+        ecmaFeatures: { jsx: true },
+        sourceType: "module",
+      },
     },
     settings: { react: { version: "18.3" } },
     plugins: {
