@@ -1,5 +1,5 @@
-import Image from "../components/Image";
-import PageContainer from "../components/PageContainer";
+import { Image } from "../components/Image";
+import { PageContainer } from "../components/PageContainer";
 
 import BWD_1x from "../assets/music/DSC_6821.jpg";
 import BWD_2x from "../assets/music/DSC_6821@2x.jpg";
@@ -19,11 +19,11 @@ import KL_2x from "../assets/music/DSC_9296@2x.jpg";
 import JM_1x from "../assets/music/DSC_9934.jpg";
 import JM_2x from "../assets/music/DSC_9934@2x.jpg";
 
-import IM_1x from "../assets/music/_DSC4354.jpg";
-import IM_2x from "../assets/music/_DSC4354@2x.jpg";
+import IM_1x from "../assets/music/DSC4354.jpg";
+import IM_2x from "../assets/music/DSC4354@2x.jpg";
 
-import ITM_1x from "../assets/music/_DSC8849.jpg";
-import ITM_2x from "../assets/music/_DSC8849@2x.jpg";
+import ITM_1x from "../assets/music/DSC8849.jpg";
+import ITM_2x from "../assets/music/DSC8849@2x.jpg";
 
 import Avatar2_1x from "../assets/music/DSC_6786.jpg";
 import Avatar2_2x from "../assets/music/DSC_6786@2x.jpg";
@@ -31,8 +31,8 @@ import Avatar2_2x from "../assets/music/DSC_6786@2x.jpg";
 import FATM_1x from "../assets/music/DSC_8588.jpg";
 import FATM_2x from "../assets/music/DSC_8588@2x.jpg";
 
-import BTF_1x from "../assets/music/_DSC7263.jpg";
-import BTF_2x from "../assets/music/_DSC7263@2x.jpg";
+import BTF_1x from "../assets/music/DSC7263.jpg";
+import BTF_2x from "../assets/music/DSC7263@2x.jpg";
 
 import ITM2_1x from "../assets/music/DSC_1397.jpg";
 import ITM2_2x from "../assets/music/DSC_1397@2x.jpg";
@@ -49,8 +49,8 @@ import MIW_2x from "../assets/music/DSC_9717@2x.jpg";
 import FC_1x from "../assets/music/DSC_8909.jpg";
 import FC_2x from "../assets/music/DSC_8909@2x.jpg";
 
-import ST_1x from "../assets/music/_DSC5360.jpg";
-import ST_2x from "../assets/music/_DSC5360@2x.jpg";
+import ST_1x from "../assets/music/DSC5360.jpg";
+import ST_2x from "../assets/music/DSC5360@2x.jpg";
 
 import T_1x from "../assets/music/DSC_7314.jpg";
 import T_2x from "../assets/music/DSC_7314@2x.jpg";
@@ -58,8 +58,8 @@ import T_2x from "../assets/music/DSC_7314@2x.jpg";
 import MM_1x from "../assets/music/DSC_9526.jpg";
 import MM_2x from "../assets/music/DSC_9526@2x.jpg";
 
-import TS_1x from "../assets/music/_DSC7635.jpg";
-import TS_2x from "../assets/music/_DSC7635@2x.jpg";
+import TS_1x from "../assets/music/DSC7635.jpg";
+import TS_2x from "../assets/music/DSC7635@2x.jpg";
 
 import B_1x from "../assets/music/DSC_0806.jpg";
 import B_2x from "../assets/music/DSC_0806@2x.jpg";
@@ -82,8 +82,8 @@ import MS_2x from "../assets/music/DSC_8980@2x.jpg";
 import BE2_1x from "../assets/music/DSC_5971.jpg";
 import BE2_2x from "../assets/music/DSC_5971@2x.jpg";
 
-import ETID_1x from "../assets/music/_DSC6927.jpg";
-import ETID_2x from "../assets/music/_DSC6927@2x.jpg";
+import ETID_1x from "../assets/music/DSC6927.jpg";
+import ETID_2x from "../assets/music/DSC6927@2x.jpg";
 
 import S_1x from "../assets/music/DSC_0788.jpg";
 import S_2x from "../assets/music/DSC_0788@2x.jpg";
@@ -91,7 +91,7 @@ import S_2x from "../assets/music/DSC_0788@2x.jpg";
 import SP_1x from "../assets/music/DSC_0223.jpg";
 import SP_2x from "../assets/music/DSC_0223@2x.jpg";
 
-const Home = () => {
+export const Home = () => {
   return (
     <PageContainer>
       {/* <b>Barb Wire Dolls</b> */}
@@ -187,5 +187,3 @@ const Home = () => {
     </PageContainer>
   );
 };
-
-export default Home;
