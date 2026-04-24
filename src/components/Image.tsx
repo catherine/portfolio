@@ -1,9 +1,9 @@
 import './Image.css'
 
-export function Image({src, srcSet, alt }: { src: string, srcSet?: string; alt?: string }) {
+export function Image({ src, srcSet, alt }: { src: string; srcSet?: string; alt?: string }) {
   const handleRightClickPrevention = (e: MouseEvent) => {
-    e.preventDefault(); // Disable the right-click menu
-  };
+    e.preventDefault() // Disable the right-click menu
+  }
   return (
     <img
       className="image"
@@ -13,5 +13,5 @@ export function Image({src, srcSet, alt }: { src: string, srcSet?: string; alt?:
       src={src}
       srcSet={srcSet}
     />
-  );
+  )
 }

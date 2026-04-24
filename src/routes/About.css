@@ -16,7 +16,6 @@
 }
 
 @media (min-width: 992px) {
-
   .about {
     display: flex;
     flex-direction: row;

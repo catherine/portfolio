@@ -1,14 +1,20 @@
-import { Image } from "./Image";
-import "./ImageRow.css";
+import { Image } from './Image'
+import './ImageRow.css'
 
-export function ImageRow({ images, shouldShowVerticalOnMobile = false }: { images: string[], shouldShowVerticalOnMobile?: boolean }) {
+export function ImageRow({
+  images,
+  shouldShowVerticalOnMobile = false,
+}: {
+  images: string[]
+  shouldShowVerticalOnMobile?: boolean
+}) {
   return (
-    <div className={`imageRow ${shouldShowVerticalOnMobile ? "verticalOnMobile" : null}`}>
+    <div className={`imageRow ${shouldShowVerticalOnMobile ? 'verticalOnMobile' : null}`}>
       {images.map((image) => (
-        <div>
+        <div key={image}>
           <Image src={image} />
         </div>
       ))}
     </div>
-  );
+  )
 }

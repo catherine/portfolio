@@ -1,4 +1,4 @@
-import './SocialLinks.css';
+import './SocialLinks.css'
 
 export function SocialLinks() {
   return (

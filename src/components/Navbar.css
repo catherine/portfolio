@@ -5,7 +5,7 @@
   width: 100%;
   position: fixed;
   background-color: #fff;
-} 
+}
 
 @media screen and (min-width: 677px) {
   .navbar {
@@ -27,11 +27,11 @@
 }
 
 .navbarLinks {
-  display: flex;;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-   margin-top: 20px;
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 677px) {
@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  } 
+  }
 }
 
 .navbarLinks > a {
@@ -55,7 +55,7 @@
   border-radius: 4px;
 }
 
-.navbarLinks > a:hover, 
+.navbarLinks > a:hover,
 .navbarLinks > a.active:hover {
   color: #fff;
   background-color: #196161;

@@ -1,29 +1,29 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
-import { Navbar } from "./Navbar";
+import { ReactNode, useEffect, useRef, useState } from 'react'
+import { Navbar } from './Navbar'
 
-import "./PageContainer.css";
-import { useScreenSize } from "../hooks/useScreenSize";
-import { MOBILE_BREAKPOINT } from "../constants";
+import './PageContainer.css'
+import { useScreenSize } from '../hooks/useScreenSize'
+import { MOBILE_BREAKPOINT } from '../constants'
 
 interface PageContainerProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export function PageContainer({ children }: PageContainerProps) {
-  const navbarRef = useRef<HTMLDivElement>(null);
-  const [navbarOffset, setNavbarOffset] = useState(0);
-  const {width: screenWidth} = useScreenSize();
+  const navbarRef = useRef<HTMLDivElement>(null)
+  const [navbarOffset, setNavbarOffset] = useState(0)
+  const { width: screenWidth } = useScreenSize()
 
   useEffect(() => {
     const updateHeight = () => {
       if (navbarRef.current) {
-        setNavbarOffset(navbarRef.current.offsetHeight);
+        setNavbarOffset(navbarRef.current.offsetHeight)
       }
-    };
-    updateHeight();
-    window.addEventListener("resize", updateHeight);
-    return () => window.removeEventListener("resize", updateHeight);
-  }, []);
+    }
+    updateHeight()
+    window.addEventListener('resize', updateHeight)
+    return () => window.removeEventListener('resize', updateHeight)
+  }, [])
 
   return (
     <div className="pageContainer">
@@ -37,5 +37,5 @@ export function PageContainer({ children }: PageContainerProps) {
         {children}
       </div>
     </div>
-  );
+  )
 }
